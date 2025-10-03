@@ -10,7 +10,9 @@ public class BenchmarkRunner {
         int trials = 3;
 
         File dataDir = new File("data");
-        if (!dataDir.exists()) dataDir.mkdirs();
+        if (!dataDir.exists()) {
+            dataDir.mkdirs();
+        }
 
         String csvPath = "data/benchmarks.csv";
         try (PrintWriter out = new PrintWriter(new FileWriter(csvPath, false))) {
