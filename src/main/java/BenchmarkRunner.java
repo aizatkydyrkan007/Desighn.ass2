@@ -16,7 +16,7 @@ public class BenchmarkRunner {
 
         String csvPath = "data/benchmarks.csv";
         try (PrintWriter out = new PrintWriter(new FileWriter(csvPath, false))) {
-            out.println("n,input_type,trial,time_seconds,comparisons,swaps,array_reads,array_writes,timestamp");
+            out.println("n,input_type,trial,time_seconds,comparisons,swaps,array_reads,array_writes");
             for (String inputType : inputTypes) {
                 for (int n : sizes) {
                     for (int t = 1; t <= trials; t++) {
